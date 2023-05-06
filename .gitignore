@@ -2,4 +2,3 @@
 package-lock.json
 .DS_Store
 .gitattributes
-build/

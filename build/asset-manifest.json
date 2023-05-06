@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b98d8ba.chunk.css",
+    "main.js": "/static/js/main.ded644df.chunk.js",
+    "main.js.map": "/static/js/main.ded644df.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.288dff8a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.288dff8a.js.map",
+    "static/js/2.bffcfddd.chunk.js": "/static/js/2.bffcfddd.chunk.js",
+    "static/js/2.bffcfddd.chunk.js.map": "/static/js/2.bffcfddd.chunk.js.map",
+    "static/js/3.a0144c7e.chunk.js": "/static/js/3.a0144c7e.chunk.js",
+    "static/js/3.a0144c7e.chunk.js.map": "/static/js/3.a0144c7e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.2b98d8ba.chunk.css.map": "/static/css/main.2b98d8ba.chunk.css.map",
+    "static/js/2.bffcfddd.chunk.js.LICENSE.txt": "/static/js/2.bffcfddd.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/EuclidSquare-Semibold.25c88223.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.288dff8a.js",
+    "static/js/2.bffcfddd.chunk.js",
+    "static/css/main.2b98d8ba.chunk.css",
+    "static/js/main.ded644df.chunk.js"
+  ]
+}
