@@ -1,0 +1,133 @@
+nav {
+  color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100px;
+}
+.header-bar {
+  background: rgba(12, 17, 19, 0.075);
+
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  max-width: 100vw;
+  min-height: 10vh;
+}
+.header-main {
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  flex-grow: 1;
+  display: flex;
+  padding: 8px 16pz 8px 0;
+}
+.nav-group {
+  display: inline-block;
+  -webkit-box-orient: horizontal;
+}
+mainnav {
+  width: calc(100% - 1rem);
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+mainnav links ul {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0.5rem 0;
+}
+mainnav links ul li {
+  transition: 0.3s ease-in-out;
+  margin: 0 0.2rem;
+  padding: 0.5rem 1rem;
+}
+mainnav links ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+mainnav links ul li:hover a {
+  color: chartreuse;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  border-radius: 10px;
+  padding: 3px;
+}
+mainnav links ul li:hover a span {
+  font-size: medium;
+}
+mainnav links ul li a span {
+  margin-left: 0.5rem;
+  font-size: 0px;
+  transition: 0.4s ease-in-out;
+}
+mainnav search {
+  background: rgba(255, 255, 255, 0);
+  color: rgb(188, 196, 180);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+mainnav search input {
+  position: sticky;
+  border: solid 0.4px chartreuse;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  outline: none;
+  color: white;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+}
+mainnav search:hover {
+  background: rgba(255, 255, 255, 0.219);
+}
+mainnav search input:hover {
+  border: none;
+  transition: 0.1s ease-in-out;
+}
+mainnav quickview {
+  display: flex;
+  flex-direction: row;
+}
+mainnav quickview ul {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+mainnav quickview ul li {
+  cursor: pointer;
+  margin: 0 0.6rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(29, 27, 27, 0.25);
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+mainnav quickview ul li badge {
+  background: rgba(64, 179, 19, 0.226);
+  width: 25px;
+  height: 25px;
+  font-size: x-small;
+  font-family: "MSB";
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -15px;
+  border: solid 1.5px black;
+}

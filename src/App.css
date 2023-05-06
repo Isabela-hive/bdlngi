@@ -1,0 +1,24 @@
+.nv {
+  position: fixed;
+  bottom: 100vh;
+  z-index: 2;
+  /* backdrop-filter: blur(20px); */
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.info > * {
+  color: white;
+  text-decoration: none;
+}
+
+.info > .title {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.info > .phrase {
+  font-size: small;
+}

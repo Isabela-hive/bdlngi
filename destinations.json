@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "61aa0890e2cdaee049f46663"
+  },
+  "name": "Sumba Island",
+  "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid iusto inventore delectus. Dolorum maxime obcaecati consectetur aliquam molestias fugit alias veritatis ratione sunt labore nam eius accusamus dolor, culpa quidem?",
+  "gallery": [
+    "images/victoria.jpg",
+    "images/nicepic.jpg"
+  ],
+  "nearbyFacilities": [
+    {
+      "$oid": "61aa09e9993c12558d2a6dd9"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "61aa0fd1eb4d3ab56e6f96f4"
+  },
+  "name": "che's bay",
+  "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid iusto inventore delectus. Dolorum maxime obcaecati consectetur aliquam molestias fugit alias veritatis ratione sunt labore nam eius accusamus dolor, culpa quidem?",
+  "gallery": [
+    "images/islandreflection.jpg"
+  ],
+  "nearbyFacilities": [
+    {
+      "$oid": "61aa0f5feb4d3ab56e6f96f2"
+    },
+    {
+      "$oid": "61aa09e9993c12558d2a6dd9"
+    }
+  ],
+  "__v": 0
+}]

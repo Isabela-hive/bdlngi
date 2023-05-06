@@ -1,0 +1,29 @@
+.clan-tile {
+  background: var(--beige);
+  padding: 10px;
+  box-shadow: var(--black) 0 0 20px, inset 0 0 500px var(--black);
+  color: var(--black);
+}
+
+.clan-tile .clan-title {
+  font-size: 30px;
+}
+
+.clan-tile .naming {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.clan-tile .male {
+  margin-left: 20px;
+}
+
+.clan-tile .male svg {
+  margin: 0 5px;
+}
+
+.clan-tile .male span {
+  text-transform: capitalize;
+}

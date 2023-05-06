@@ -1,0 +1,60 @@
+:root {
+  --black: black;
+  --lightBlack: rgba(0, 0, 0, 0.39);
+  --white: white;
+  --lightWhite: rgba(255, 255, 255, 0.336);
+  --error: rgb(133, 54, 51);
+  --default: rgb(49, 97, 153);
+  --success: green;
+  --beige: #e1dbcf;
+}
+
+@font-face {
+  font-family: mr;
+  src: url(./fonts/Eculid/EuclidSquare-Regular.woff);
+}
+
+@font-face {
+  font-family: msb;
+  src: url(./fonts/Eculid/EuclidSquare-Semibold.woff);
+}
+
+@font-face {
+  font-family: ml;
+  src: url(./fonts/Eculid/EuclidSquare-Light.woff);
+}
+
+@font-face {
+  font-family: mm;
+  src: url(./fonts/Eculid/EuclidSquare-Medium.woff);
+}
+
+* {
+  font-family: ml;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--black);
+  color: var(--white);
+}
+
+.ti {
+  padding: 40px;
+  font-size: 30px;
+  text-align: end;
+}
+
+.rotating {
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

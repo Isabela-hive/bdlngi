@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Boat Racing",
+    "image": "images/boatracing.jpg",
+    "link": "sports"
+  },
+  {
+    "label": "Wrestling",
+    "image": "images/wrestling.jpg",
+    "link": "sports"
+  },
+  {
+    "label": "Football",
+    "image": "images/footballafrica.avif",
+    "link": "sports"
+  },
+  {
+    "label": "Myths & Taboos",
+    "image": "images/forestroad.jpg",
+    "link": "sports"
+  }
+]

@@ -1,0 +1,180 @@
+.history {
+  background: var(--default);
+  box-shadow: inset var(--black) 0 0 100px;
+  /* min-height: 120vh; */
+  padding: 20px;
+}
+
+.h-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-nav-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.h-nav-item.sel,
+.h-nav-item:hover {
+  background: var(--white);
+  color: var(--black);
+  letter-spacing: 1.4px;
+}
+
+.h-content {
+  flex-direction: column;
+}
+
+.h-carousel {
+  background: var(--black);
+  height: 50vh;
+  box-shadow: var(--black) 0 0 100px, inset var(--black) 0 0 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  position: relative;
+}
+
+.h-label {
+  /* font-size: 40px; */
+  /* text-shadow: var(--black) 0 0 100px; */
+  background: var(--white);
+  color: var(--black);
+  max-width: fit-content;
+  /* padding: 10px 20px; */
+  /* border-bottom: 16px var(--default) solid; */
+  /* font-family: msb; */
+  /* border-radius: 4px; */
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.295), 0 0 100px var(--black),
+    inset 0 0 200px var(--black);
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  text-decoration: none;
+}
+
+.h-label:hover {
+  /* letter-spacing: 1px; */
+  text-decoration: underline var(--default) 1.5px double;
+}
+
+.h-title {
+  font-size: 40px;
+  font-family: msb;
+  padding: 10px;
+  text-shadow: var(--white) 0 0 50px;
+}
+
+.h-more {
+  background: var(--black);
+  padding: 5px 10px;
+  text-transform: capitalize;
+  color: var(--white);
+  /* font-family: msb; */
+  opacity: 0.8;
+}
+
+.h-legends {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  right: 20px;
+}
+
+.h-legend {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  background-size: cover;
+  margin: 5px;
+  background-color: var(--white);
+  cursor: pointer;
+  border: solid var(--black) 2px;
+  border-radius: 2px;
+  transition: 0.3s ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.336) 0 0 10px;
+}
+.h-legend.sel {
+  border: solid 2px var(--white);
+  transform: scale(1.2);
+}
+.h-legend:hover {
+  transform: scale(1.2);
+}
+.h-intro {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.h-main {
+  width: 60vw;
+  /* background: white; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.h-side {
+  width: 20vw;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.185);
+}
+.h-item {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  cursor: pointer;
+  /* transition: 0.2s ease-in-out; */
+  box-shadow: var(--black) 0 0 30px, inset var(--black) 0 0 100px;
+  position: relative;
+}
+.h-item:hover {
+  transform: scale(1.02);
+}
+
+.h-item-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  padding: 10px;
+  opacity: 0.6;
+}
+.h-side-title {
+  background: var(--error);
+  padding: 5px 10px;
+  /* margin-bottom: 10px; */
+  font-family: mm;
+}
+.h-side-content {
+  display: flex;
+  flex-direction: column;
+}
+.h-side-item {
+  display: flex;
+  align-items: center;
+  margin: 1px 0px;
+  background-color: var(--white);
+  color: var(--black);
+  cursor: pointer;
+  padding: 5px;
+}
+.h-side-i {
+  color: var(--error);
+  font-size: 20px;
+  margin: 10px;
+  font-family: mm;
+}
+.h-side-l {
+  color: var(--default);
+  text-transform: capitalize;
+}
+.h-side-l:hover {
+  text-decoration: underline;
+}

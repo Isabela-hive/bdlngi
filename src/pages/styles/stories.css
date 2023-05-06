@@ -1,0 +1,42 @@
+.story-not-found {
+  margin-top: 100px;
+  min-height: calc(100vh - 300px);
+  background-color: var(--error);
+  box-shadow: inset var(--black) 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.story-not-found > svg {
+  margin: 10px;
+}
+
+.story-not-found > div {
+  font-size: 24px;
+}
+
+.story {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+}
+
+.story-head {
+  height: 70px;
+  font-size: 30px;
+  padding: 15px;
+  box-shadow: inset var(--black) 0 0 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.story-content {
+  min-height: 100px;
+  flex: 1;
+  background: var(--success);
+  box-shadow: inset var(--black) 0 0 20px;
+  padding: 20px;
+}

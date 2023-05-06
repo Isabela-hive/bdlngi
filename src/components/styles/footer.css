@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 20px;
+  /* border-top: solid var(--white) 4px; */
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.5s ease-in-out;
+}
+
+.footer .footer-title .tit {
+  font-family: mr;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.footer .footer-title .phr {
+  font-size: small;
+}

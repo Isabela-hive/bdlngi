@@ -1,0 +1,20 @@
+.clans {
+  display: flex;
+  flex-direction: column;
+}
+
+.cl-title {
+  font-size: 20px;
+  font-family: mm;
+  /* margin-bottom: 10px; */
+}
+.cl-desc {
+  font-size: 12px;
+  text-align: justify;
+  margin: 20px 0;
+}
+.cl-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
