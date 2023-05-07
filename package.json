@@ -25,7 +25,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://DevWanzy.github.io/bdlngi",
+  "homepage": "https://devwanzy.github.io/bdlngi/",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
