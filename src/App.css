@@ -4,7 +4,9 @@
   z-index: 2;
   /* backdrop-filter: blur(20px); */
 }
-
+.app {
+  height: 100vh;
+}
 .info {
   margin-left: 20px;
 }

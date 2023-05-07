@@ -49,116 +49,120 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          {this.state.loading ? (
-            <Splash />
-          ) : (
-            <div
-              onClick={() => {
-                window.addEventListener('keyup', this.closeMenu);
-                //if (!this.state.navOpen) {
-
-                // } else {
-                //   gsap.to('.nv', 1, { bottom: '100vh' })
-                // }
-              }}
-            >
+      <div className="app">
+        <Router>
+          <div>
+            {this.state.loading ? (
+              <Splash />
+            ) : (
               <div
-                style={{
-                  position: 'fixed',
-                  padding: '2vw 5vw',
-                  zIndex: 1,
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: 'row',
-                  top: 0,
-                  left: 0,
-                  right: 0,
+                onClick={() => {
+                  window.addEventListener('keyup', this.closeMenu);
+                  //if (!this.state.navOpen) {
+
+                  // } else {
+                  //   gsap.to('.nv', 1, { bottom: '100vh' })
+                  // }
                 }}
               >
-                <FontAwesomeIcon
-                  style={{ cursor: 'pointer' }}
-                  icon={faBars}
-                  size="2x"
-                  onClick={() => {
-                    gsap
-                      .to('.nv', 0.6, {
-                        bottom: '0vh',
-                      })
-                      .then(async () => {
-                        gsap.to('.navbar', 1, { backdropFilter: 'blur(10px)' });
-                        gsap.to('.navbar > *', 0.6, {
-                          opacity: 1,
-                        });
-                        let p = document.querySelectorAll('.navbar .navitem');
-                        for (var i of p) {
-                          // let cc = i.classList.contains('activenav')
-                          await gsap.fromTo(
-                            i,
-                            0.1,
-                            { opacity: 0, x: 50 },
-                            { opacity: 1, x: 0 }
-                          );
-                        }
-                      });
-                  }}
-                />
                 <div
-                  onClick={() => console.log(this.state.routes)}
-                  className="info"
-                  style={{ flex: 1 }}
+                  style={{
+                    position: 'fixed',
+                    padding: '2vw 5vw',
+                    zIndex: 1,
+                    display: 'flex',
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                  }}
                 >
-                  <NavLink className="title" to="/">
-                    {c.appName}
-                  </NavLink>
-                  <div className="phrase">{c.phrase}</div>
+                  <FontAwesomeIcon
+                    style={{ cursor: 'pointer' }}
+                    icon={faBars}
+                    size="2x"
+                    onClick={() => {
+                      gsap
+                        .to('.nv', 0.6, {
+                          bottom: '0vh',
+                        })
+                        .then(async () => {
+                          gsap.to('.navbar', 1, {
+                            backdropFilter: 'blur(10px)',
+                          });
+                          gsap.to('.navbar > *', 0.6, {
+                            opacity: 1,
+                          });
+                          let p = document.querySelectorAll('.navbar .navitem');
+                          for (var i of p) {
+                            // let cc = i.classList.contains('activenav')
+                            await gsap.fromTo(
+                              i,
+                              0.1,
+                              { opacity: 0, x: 50 },
+                              { opacity: 1, x: 0 }
+                            );
+                          }
+                        });
+                    }}
+                  />
+                  <div
+                    onClick={() => console.log(this.state.routes)}
+                    className="info"
+                    style={{ flex: 1, height: '100%' }}
+                  >
+                    <NavLink className="title" to="/">
+                      {c.appName}
+                    </NavLink>
+                    <div className="phrase">{c.phrase}</div>
+                  </div>
                 </div>
+                <AnimatePresence exitBeforeEnter>
+                  <Switch>
+                    <Route path="/" exact component={Home}></Route>
+                    <Route path="/history" exact component={History}></Route>
+                    <Route exact path="/travel" component={Travel}></Route>
+                    <Route
+                      exact
+                      path="/stories/:type/:story"
+                      component={Stories}
+                    ></Route>
+                  </Switch>
+                </AnimatePresence>
+                <Footer routes={this.state.routes} />
               </div>
-              <AnimatePresence exitBeforeEnter>
-                <Switch>
-                  <Route path="/" exact component={Home}></Route>
-                  <Route path="/history" exact component={History}></Route>
-                  <Route exact path="/travel" component={Travel}></Route>
-                  <Route
-                    exact
-                    path="/stories/:type/:story"
-                    component={Stories}
-                  ></Route>
-                </Switch>
-              </AnimatePresence>
-              <Footer routes={this.state.routes} />
-            </div>
-          )}
-        </div>
-        <div className="nv">
-          <Navbar
-            setRoutes={(r) => {
-              this.setState((p) => (p.routes = r));
-            }}
-            closeMe={async () => {
-              window.removeEventListener('keyup', this.closeMenu);
-              // if (!this.state.navOpen) {
-              //   gsap.to('.nv', 1, { bottom: '0vh' })
-              // } else {
-              let p = document.querySelectorAll('.navbar .navitem');
-              for (var i of p) {
-                await gsap.fromTo(
-                  i,
-                  0.1,
-                  { opacity: 1, x: 0 },
-                  { opacity: 0, x: 50 }
-                );
-              }
-              gsap.to('.navbar', { backdropFilter: 'blur(0px)' });
-              gsap.to('.navbar > *', 0.6, { opacity: 0 }).then(() => {
-                gsap.to('.nv', 0.6, { bottom: '100vh' });
-              });
-              // }
-            }}
-          />
-        </div>
-      </Router>
+            )}
+          </div>
+          <div className="nv">
+            <Navbar
+              setRoutes={(r) => {
+                this.setState((p) => (p.routes = r));
+              }}
+              closeMe={async () => {
+                window.removeEventListener('keyup', this.closeMenu);
+                // if (!this.state.navOpen) {
+                //   gsap.to('.nv', 1, { bottom: '0vh' })
+                // } else {
+                let p = document.querySelectorAll('.navbar .navitem');
+                for (var i of p) {
+                  await gsap.fromTo(
+                    i,
+                    0.1,
+                    { opacity: 1, x: 0 },
+                    { opacity: 0, x: 50 }
+                  );
+                }
+                gsap.to('.navbar', { backdropFilter: 'blur(0px)' });
+                gsap.to('.navbar > *', 0.6, { opacity: 0 }).then(() => {
+                  gsap.to('.nv', 0.6, { bottom: '100vh' });
+                });
+                // }
+              }}
+            />
+          </div>
+        </Router>
+      </div>
     );
   }
 }
