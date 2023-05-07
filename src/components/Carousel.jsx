@@ -1,8 +1,11 @@
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState, useEffect } from "react";
-import "./styles/carousel.css";
-import gsap from "gsap";
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState, useEffect } from 'react';
+import './styles/carousel.css';
+import image1 from '../images/africastudents.jpg';
+import image2 from '../images/luhyamum.jpg';
+import image3 from '../images/luhyachildren.jpg';
+import gsap from 'gsap';
 
 function Carousel({ setBg }) {
   const [currentItem, setCurrentItem] = useState(0);
@@ -11,22 +14,22 @@ function Carousel({ setBg }) {
     gsap.fromTo(
       `#carousel-item-${currentItem} .carousel-title`,
       2,
-      { x: "-100%", opacity: 0 },
+      { x: '-100%', opacity: 0 },
       { x: 0, opacity: 1 }
     );
     gsap.fromTo(
       `#carousel-item-${currentItem} .carousel-details`,
       1,
-      { opacity: 0, y: "100%" },
-      { opacity: 1, y: "0" },
-      "+=0.3"
+      { opacity: 0, y: '100%' },
+      { opacity: 1, y: '0' },
+      '+=0.3'
     );
     gsap.fromTo(
       `#carousel-item-${currentItem} .carousel-more`,
       0.5,
       { opacity: 0 },
       { opacity: 1 },
-      "+=0.2"
+      '+=0.2'
     );
     const interval = setInterval(
       () => moveNext(),
@@ -38,41 +41,43 @@ function Carousel({ setBg }) {
 
   const carouselItems = [
     {
-      title: "Our Education",
+      title: 'Our Education',
       description:
-        "This is a short description of our education item. It should appear on carousel.",
-      media: "/images/africastudents.jpg",
-      type: "image",
-      duration: "14",
+        'This is a short description of our education item. It should appear on carousel.',
+      // media: '/images/africastudents.jpg',
+      media: image1,
+      type: 'image',
+      duration: '14',
     },
     {
-      title: "Wonderful Island",
+      title: 'Wonderful Island',
       description:
-        "This is a short description of wonderful island item. It should appear on carousel.",
-      media: "/videos/island.mp4",
-      type: "video",
-      duration: "14",
+        'This is a short description of wonderful island item. It should appear on carousel.',
+      media: '/videos/island.mp4',
+      type: 'video',
+      duration: '14',
     },
     {
-      title: "Gallery",
+      title: 'Gallery',
       description:
-        "This is a short description of this carousel item. It should appear on carousel.",
-      media: "/images/nicepic.jpg",
-      type: "image",
-      duration: "14",
+        'This is a short description of this carousel item. It should appear on carousel.',
+      // media: '/images/nicepic.jpg',
+      media: image2,
+      type: 'image',
+      duration: '14',
     },
     {
-      title: "Environment",
+      title: 'Environment',
       description:
-        "This is a short description of environment item. It should appear on carousel.",
-      media: "/videos/sunsetocean.mp4",
-      type: "video",
-      duration: "30",
+        'This is a short description of environment item. It should appear on carousel.',
+      media: '/videos/sunsetocean.mp4',
+      type: 'video',
+      duration: '30',
     },
   ];
 
   function showCarousel(id) {
-    if (carouselItems[id].type === "video") {
+    if (carouselItems[id].type === 'video') {
       let vid = document.querySelectorAll(`video.carousel-video`);
       for (let v of vid) {
         v.pause();
@@ -83,33 +88,33 @@ function Carousel({ setBg }) {
     let b = carouselItems[id].media;
     setBg(b);
     setTimeout(() => {
-      let cs = document.querySelectorAll(".carousel-selector");
-      cs.forEach((c) => c.classList.remove("current"));
+      let cs = document.querySelectorAll('.carousel-selector');
+      cs.forEach((c) => c.classList.remove('current'));
       let csi = document.querySelector(`#carousel-selector-${id}`);
-      csi.classList.add("current");
+      csi.classList.add('current');
     }, 100);
     setTimeout(() => {
       gsap.fromTo(
         `#carousel-item-${currentItem} .carousel-title`,
         2,
         { x: 0, opacity: 1 },
-        { x: "100%", opacity: 0 }
+        { x: '100%', opacity: 0 }
       );
       gsap.fromTo(
         `#carousel-item-${currentItem} .carousel-details`,
         1,
         { opacity: 1, y: 0 },
-        { opacity: 0, y: "100%" }
+        { opacity: 0, y: '100%' }
       );
       gsap.fromTo(
         `#carousel-item-${currentItem} .carousel-more`,
         1,
         { opacity: 1 },
         { opacity: 0 },
-        "-=5"
+        '-=5'
       );
     }, carouselItems[id].duration * 1000);
-    let x = document.querySelectorAll(".carousel-item");
+    let x = document.querySelectorAll('.carousel-item');
     x.forEach((c) => (c.style.opacity = 0));
     let co = document.querySelector(`#carousel-item-${id}`);
     co.style.opacity = 1;
@@ -137,20 +142,20 @@ function Carousel({ setBg }) {
             className="carousel-item"
             style={{
               backgroundImage: `url(${media})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed',
             }}
           >
-            {type === "video" ? (
+            {type === 'video' ? (
               <video
                 className="carousel-video"
                 id={`c-video${i}`}
                 style={{
-                  width: "100vw",
-                  height: "100vh",
-                  objectFit: "cover",
-                  objectPosition: "center",
+                  width: '100vw',
+                  height: '100vh',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
                 }}
                 loop
                 muted
