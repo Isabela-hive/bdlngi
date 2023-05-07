@@ -14,7 +14,11 @@ function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1, delay: 0, easing: 'ease-in-out' }}
     >
-      <p>Hey Isabellah</p>
+      <p>
+        Hey Isabellah Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Libero perferendis error natus dolor. Officia voluptatum facere itaque
+        nobis quidem unde.
+      </p>
       <Carousel setBg={(b) => setBg(b)} />
       <Inspiration bg={bg} />
       <Contributors />
